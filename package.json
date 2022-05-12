@@ -1,14 +1,42 @@
 {
-  "name": "my-app",
+  "name": "testroot",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
+    "agent-base": "^6.0.2",
+    "assert": "^2.0.0",
+    "aws-sdk": "^2.1133.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "file-system": "^2.2.2",
+    "firebase": "^8.9.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "https-browserify": "^1.0.0",
+    "net": "^1.0.2",
+    "nodemailer": "^6.7.3",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "react": "^17.0.2",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^17.0.2",
+    "react-globe.gl": "^2.22.0",
+    "react-helmet": "^6.1.0",
+    "react-scripts": "^5.0.1",
+    "react-sizeme": "^3.0.2",
+    "stream": "^0.0.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "three": "^0.139.2",
+    "tls": "^0.0.1",
+    "universal-cookie-express": "^4.0.3",
+    "url": "^0.11.0",
+    "util": "^0.12.4",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +62,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }

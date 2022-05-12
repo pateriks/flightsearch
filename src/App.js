@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Homepage from "./reactjs/homepagePresenter.js";
+import Details from "./reactjs/detailsPresenter.js";
+import Booking from "./reactjs/bookingPresenter.js";
+import Confirmation from "./reactjs/confirmationPresenter.js";
+import Globe from "./reactjs/globePresenter.js";
+import SidebarFirebase from "./reactjs/sidebarFirebasePresenter.js";
+//import Sidebar from "./reactjs/sidebarPresenter.js";
 
-function App() {
+const Show=require("./show.js").default;
+require("./navigation.js")
+require("./utils.js")
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Globe model={props.model}/>
+        {/*<Show hash="#sidebar"><SidebarFirebase model={props.model}/></Show>*/}
+      </div>
+      <div>
+        <div className="flexParent">
+          <div className="mainContent">
+          <Show hash="#homepage">{<Homepage model={props.model}/>}</Show>
+          <Show hash="#details"><Details model={props.model}/></Show>
+          <Show hash="#booking"><Booking model={props.model}/></Show>
+          {/*<Show hash="#summary"><Summary model={props.model}/></Show>*/}
+          <Show hash="#confirmation"><Confirmation model={props.model}/></Show>
+          </div>
+          <div className="sideContent">
+            <div className="sidebar" id="sidebar"><SidebarFirebase model={props.model}/></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
